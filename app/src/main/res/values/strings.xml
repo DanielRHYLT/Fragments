@@ -5,4 +5,23 @@
     <string name="title_notifications">Musica</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="valtitleprincipal">FRAGMENTOS ANDROID</string>
+    <string name="valrbMale">Male</string>
+    <string name="valrbFemale">Female</string>
+    <string name="valrbOthers">Unspecified</string>
+    <string name="valcklicense">Driver License</string>
+    <string name="valckcar">¿Have a car?</string>
+    <string name="valbtnsave">SAVE</string>
+    <string name="valieemal">Email</string>
+    <string name="valefn">Enter Full Name</string>
+    <string-array name="country_array">
+        <item>Argentina</item>
+        <item>Venezuela</item>
+        <item>Colombia</item>
+        <item>Uruguay</item>
+        <item>Brazil</item>
+        <item>Ecuador</item>
+        <item>Bolivia</item>
+        <item>Peru</item>
+    </string-array>
 </resources>
