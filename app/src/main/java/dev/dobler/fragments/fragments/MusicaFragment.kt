@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dev.dobler.fragments.R
+import dev.dobler.fragments.adapter.SongAdapter
+import dev.dobler.fragments.model.SongModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,26 +39,40 @@ class MusicaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_musica, container, false)
+        //return inflater.inflate(R.layout.fragment_musica, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_musica, container, false)
+
+        val rvMusica: RecyclerView = view.findViewById(R.id.rvMusica)
+        rvMusica.layoutManager = LinearLayoutManager(requireContext())
+        rvMusica.adapter = SongAdapter(getSongs())
+        return  view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MusicaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MusicaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun  getSongs(): List<SongModel>{
+        val lstSong: ArrayList<SongModel> = ArrayList()
+
+        lstSong.add(SongModel(1, R.drawable.boomboompow
+            , "Boom Boom Pow", "The End"
+            , "410000000", "4:10" ))
+
+        lstSong.add(SongModel(2, R.drawable.igottafeeling
+            , "I Gotta Felling", "The End"
+            , "1500000000", "4:30" ))
+
+        lstSong.add(SongModel(3, R.drawable.meetmehalfway
+            , "Meet Me Half Way", "The End"
+            , "62000000", "4:44" ))
+
+        lstSong.add(SongModel(4, R.drawable.myhumps
+            , "My Humps", "Monkey Business"
+            , "410000000", "4:10" ))
+
+        lstSong.add(SongModel(4, R.drawable.pumpit
+            , "Pump It", "Monkey Business"
+            , "410000000", "4:10" ))
+        return lstSong
     }
+
+
+
 }

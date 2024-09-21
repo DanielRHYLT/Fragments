@@ -7,7 +7,7 @@
     android:background="#000000">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivSong"
         android:layout_width="88dp"
         android:layout_height="92dp"
         android:layout_marginStart="8dp"
@@ -28,7 +28,7 @@
         android:textColor="#FFFFFF"
         android:textColorHighlight="@color/white"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toEndOf="@+id/ivSong"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:text="TextView"
         android:textColor="#D6E7C2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
+        app:layout_constraintStart_toEndOf="@+id/ivSong" />
 
     <TextView
         android:id="@+id/tvCountPlay"
